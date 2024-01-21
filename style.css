@@ -1,0 +1,144 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background-image: url("https://static.vecteezy.com/system/resources/thumbnails/008/311/935/small/the-illustration-graphic-consists-of-abstract-background-with-a-blue-gradient-dynamic-shapes-composition-eps10-perfect-for-presentation-background-website-landing-page-wallpaper-vector.jpg");
+    background-size: cover;
+    
+
+}
+.container h2{
+    color: white;
+    font-size: 32px;
+    padding: 50px 0;
+    text-align: center;
+}
+
+
+.price-row{
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px , 1fr));
+    grid-gap: 25px;
+}
+.price-col{
+    /* background: lightgrey; */
+    background-image: linear-gradient( white, cyan);
+    padding: 10% 15%;
+    border-radius: 10px;
+    color: black;
+    text-align: center0;
+}
+.price-col p{
+    font-size: 22px;
+
+}
+.price-col h3{
+    font-size: 44px;
+    margin: 20px 0 40px;
+    font-weight: 500;
+}
+.price-col h3 span{
+    font-size: 16px;
+}
+.price-col ul{
+    text-align: left;
+    margin: 20px 0;
+    color: black;
+    list-style: none;
+}
+.price-col ul li{
+    margin: 15px 0;
+}
+.price-col ul li::before{
+    content: '\2022';
+    color: red;
+    font-weight: bold;
+    margin-right:8px ;
+}
+.price-col button{
+    width: 100%;
+    padding: 15px 0;
+    background: transparent;
+    color: black;
+    font-size: 15px;
+    border: 1px solid gray;
+    margin-top: 30px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.price-col button:hover{
+    background:green;
+}
+
+/* Responsive Styles */
+
+@media only screen and (max-width: 768px) {
+    .price-col {
+        padding: 15% 10%;
+    }
+
+    .container h2 {
+        padding: 30px 0;
+        font-size: 28px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .price-col {
+        padding: 10% 5%;
+    }
+
+    .nav-list {
+        display: none;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: linear-gradient(white, cyan);
+        width: 100%;
+        text-align: center;
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+        z-index: 1;
+    }
+
+    .nav-list.show {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .nav-list li {
+        margin: 10px 0;
+    }
+
+    .navbar {
+        justify-content: space-between;
+        padding: 15px 20px;
+        background: linear-gradient(white, cyan);
+    }
+
+    .navbar .menu-toggle {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+    }
+
+    .navbar .bar {
+        width: 25px;
+        height: 3px;
+        background: black;
+        margin: 5px 0;
+        transition: 0.4s;
+    }
+
+    .navbar .bar:hover {
+        background: green;
+    }
+}
